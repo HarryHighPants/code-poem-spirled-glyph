@@ -1,42 +1,33 @@
-// In binary and black
-// Lie creatures of spirled glyph
-// Its orbit rhythmed systolic
-// Stardiscrete points unnamed
-
-// A creature built from ones
-// Spirals with eyes so full
-// Pharyngeal minds observe
-// Our machines awake
-let                     spiral
-=(e,                     a)=>
- {let                     i=
-  Math                  .sin
-   (a),                 n=
-      Math          .round
+let                          s=(
+ e,a)/*     In binary      */=>
+  {let/*   and         */i=Math
+   .sin/*     black     */(a),
+      n=Math          .round
         (10         *i+
           10)    ,r=
              Math
           .abs   (i)
         >.85        ?"*"
-     :Math           .cos
-    (a)                 >0?
-   "-"                   :"@"
- return                    e.
- slice                    (0,n
-)+r                         +e
-.slice                    (n+1)
- };for                    (let
-  frame                  =0;;
-   frame++              ){
+     :Math            .cos
+    (a)/*    Lie       */>0?
+   "-"/*   creatures   */:"@"
+ return/*    of glyph      */e.
+ slice                     (0,n
+)+r/*                      */+e
+.slice/*    Its orbit    */(n+1)
+ };for/*  rhythmed       */(let
+  eye/*      systolic   */=0;;
+   eye++                ){
      await            new
        Promise     ((e)=>
            setTimeout
              (e,60))
            let     e=
-        spiral       (" ".
+        s(            " ".
      repeat            (25),
-   (frame                +15)
-  *.2);                  console
-.log(                      spiral
-(e,                          .21*                  
-frame                         ))}
+   (eye/*       A      */+15)
+  *.2);/*   creature   */console
+.log/*    built  from       */(s
+(e,/*       ones           */.21*
+eye                           ))}
+                                 
